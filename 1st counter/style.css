@@ -1,0 +1,65 @@
+/* بنسټیز او ریسیټ سټایل */
+* { box-sizing: border-box; } /* د بکس اندازه محاسبه کول معیاري کول */
+html, body { height: 100%; } /* د پورته تګلارې لپاره لوړوالی برابرول */
+body {
+  margin: 0; /* د بدن حاشیه صفر کول */
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; /* فونټ ټاکل */
+  background: linear-gradient(135deg, #98c4eb 0%, #b5d0e8 100%); /* نرمه شالید ګردی رنګ */
+  display: flex; /* د منځپانګې مرکز کولو لپاره فلیکس استعمال */
+  align-items: center; /* عمودي مرکز کول */
+  justify-content: center; /* افقي مرکز کول */
+  padding: 24px; /* دننه فاصله */
+}
+
+.app { width: 100%; max-width: 420px; } /* د اپلیکیشن اعظمي پلنوالی */
+
+.card {
+  background: #fe0579; /* سپین کارډ شالید */
+  border-radius: 14px; /* ګردې کونجې */
+  box-shadow: 0 8px 24px rgba(18, 33, 75, 0.08); /* نرم سیوري */
+  padding: 28px; /* دننه فاصله */
+  text-align: center; /* متن مرکز ته کول */
+}
+
+.title { margin: 0 0 12px 0; font-size: 20px; color: #13294b; } /* عنوان لپاره سټایل */
+
+.display {
+  font-size: 64px; /* د شمېر لوی فونټ سایز */
+  font-weight: 700; /* غټ لیکنې */
+  color: #0f1724; /* د متن رنګ */
+  background: linear-gradient(180deg, #b91d97 0%, #d25c70 100%); /* سپک ګرد شالید */
+  border-radius: 10px; /* ګرد کونجې */
+  padding: 18px 12px; /* دننه فاصله */
+  margin-bottom: 18px; /* لاندې واټن */
+  transition: transform 120ms ease, box-shadow 120ms ease; /* نرم ټرانزیشن د تبادلې لپاره */
+}
+
+.controls { display: flex; gap: 12px; justify-content: center; }
+/* د تڼیو عمومي سټایل */
+.btn {
+  appearance: none; /* ډیفالټ بڼې غیر فعالول */
+  border: none; /* د سرحد لرې کول */
+  padding: 12px 18px; /* د تڼۍ دننه فاصله */
+  font-size: 20px; /* د تڼۍ فونټ سایز */
+  border-radius: 50px; /* ګرد کونجې */
+  background: linear-gradient(180deg, #4facfe, #00f2fe); /* سپک شالید */
+  box-shadow: 0 6px 16px rgba(16, 30, 64, 0.06); /* نرم سیوري */
+  cursor: pointer; /* د کرسر اشارې بدلول */
+  box-shadow: 0 8px 0 #489ee9, 0 15px 20px rgba(0, 0, 0, 0.04); /* د تڼۍ سیوري */
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease; /* نرم تاثیرات */
+}
+
+.btn:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(16, 30, 64, 0.10); } /* په هوور کې پورته کیدل */
+.btn:active { transform: translateY(-1px) scale(0.99); } /* د کلیک کوچنی سکال */
+ box-shadow: 0 8px 0 #489ee9, 0 15px 20px rgba(0, 0, 0, 0.04);
+.btn.reset {
+  background: linear-gradient(180deg, #fff6f6, #fff1f1); /* د ری سیټ لپاره نرمه سور رنګه */
+  color: #8b1d1d; /* سور-توره رنګ د متن لپاره */
+  
+}
+
+/* د ښکلا لپاره کوچنی رسپانسیف تنظیم */
+@media (max-width: 420px) {
+  .display { font-size: 48px; padding: 14px 10px; } /* کوچني سکرینونو لپاره اندازې کمول */
+  .btn { padding: 10px 14px; font-size: 18px; } /* تڼۍ اندازې کمول */
+}
